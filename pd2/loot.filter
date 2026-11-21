@@ -1,0 +1,5 @@
+// Add socket count to socketed items while they are on the ground.
+ItemDisplay[GROUND SOCKETS>0]: %NAME% [%SOCKETS%]%CONTINUE%
+
+// Preserve the normal appearance of every other item, including prior edits.
+ItemDisplay[]: %NAME%
