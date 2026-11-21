@@ -2,6 +2,8 @@
 
 My ARPG loot filters and tooling to maintain them.
 
+I typically prefer filters that are much more minimal than the "standard" ones.
+
 ## Project Diablo 2
 
 `pd2/loot.filter` is a minimal PD2 filter that adds ground-item annotations: `[E]` for ethereal items, `[4]` for socketed items, and `[E, 2]` for ethereal socketed items.
