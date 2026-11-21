@@ -1,5 +1,11 @@
-// Add socket count to socketed items while they are on the ground.
-ItemDisplay[GROUND SOCKETS>0]: %NAME% [%SOCKETS%]%CONTINUE%
+// Add combined ethereal and socket information to eligible ground items.
+ItemDisplay[GROUND ETH SOCKETS>0]: %NAME% [E, %SOCKETS%]%CONTINUE%
+
+// Indicate ethereal ground items without sockets.
+ItemDisplay[GROUND ETH SOCKETS=0]: %NAME% [E]%CONTINUE%
+
+// Add socket count to non-ethereal socketed items on the ground.
+ItemDisplay[GROUND !ETH SOCKETS>0]: %NAME% [%SOCKETS%]%CONTINUE%
 
 // Preserve the normal appearance of every other item, including prior edits.
 ItemDisplay[]: %NAME%
