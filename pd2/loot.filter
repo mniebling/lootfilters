@@ -1,3 +1,20 @@
+// PD2 damaging thrown potions.
+Alias[DMG_POTIONS]: (tpfl OR tpfm OR tpfs OR tpgl OR tpgm OR tpgs OR tpcl OR tpcm OR tpcs OR tpll OR tplm OR tpls)
+
+// Thawing, Antidote and Stamina potions.
+Alias[UTILITY_POTIONS]: (yps OR wms OR vps)
+
+// ID and TP scrolls.
+Alias[UTILITY_SCROLLS]: (isc OR tsc)
+
+// --------------------
+
+// Hide damaging thrown potions on the ground once the character reaches level 10.
+ItemDisplay[GROUND DMG_POTIONS CLVL>9]:
+
+// Hide utility potions and scrolls on the ground once the character reaches level 30.
+ItemDisplay[GROUND (UTILITY_POTIONS OR UTILITY_SCROLLS) CLVL>29]:
+
 // Add combined ethereal and socket information to eligible ground items.
 ItemDisplay[GROUND ETH SOCKETS>0]: %NAME% [E, %SOCKETS%]%CONTINUE%
 
